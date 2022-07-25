@@ -1,0 +1,75 @@
+@import "vars";
+@import "normalize";
+@import "fonts";
+@import "typography";
+@import "forms";
+
+* {
+	box-sizing: border-box;
+
+	&:after,
+	&:before {
+		box-sizing: border-box;
+	}
+
+	&::-webkit-media-controls-panel {
+		display: none !important;
+		-webkit-appearance: none;
+	}
+
+	&::--webkit-media-controls-play-button {
+		display: none !important;
+		-webkit-appearance: none;
+	}
+
+	&::-webkit-media-controls-start-playback-button {
+		display: none !important;
+		-webkit-appearance: none;
+	}
+}
+
+html {
+	height: 100%;
+	min-height: 100%;
+	font-family: $font;
+	font-size: 10px;
+	line-height: 1.25;
+	font-weight: 400;
+	letter-spacing: 0;
+	color: $white;
+	background: $black;
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	font-size: 1.4rem;
+	min-width: 320px;
+}
+
+.main {
+	overflow: hidden;
+}
+
+.wr {
+	padding: 0 20px;
+	max-width: 1920px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.wr-section {
+	max-width: 1920px;
+	margin: 0 auto;
+	width: 100%;
+
+	&-title {
+		width: 220px;
+	}
+
+	&-content {
+		width: calc(100% - 220px);
+	}
+}
+
+

@@ -1,0 +1,22 @@
+@mixin fontFace($FontName, $FontPathName, $FontFileName, $FontWeight) {
+	@font-face {
+		font-family: "#{$FontName}";
+		font-weight: #{$FontWeight};
+		font-style: normal;
+
+		src: url("../fonts/#{$FontPathName}/#{$FontFileName}.eot");
+		src: url("../fonts/#{$FontPathName}/#{$FontFileName}.woff") format("woff"),
+			url("../fonts/#{$FontPathName}/#{$FontFileName}.ttf") format("truetype"),
+			url("../fonts/#{$FontPathName}/#{$FontFileName}.eot?#iefix") format("embedded-opentype");
+	}
+}
+
+@include fontFace("SourceSerifPro", "SourceSerifPro", "SourceSerifPro-Bold", 700);
+@include fontFace("SourceSerifPro", "SourceSerifPro", "SourceSerifPro-SemiBold", 600);
+@include fontFace("SourceSerifPro", "SourceSerifPro", "SourceSerifPro-Regular", 400);
+
+
+@include fontFace("Poppins", "Poppins", "Poppins-SemiBold", 600);
+@include fontFace("Poppins", "Poppins", "Poppins-Medium", 500);
+@include fontFace("Poppins", "Poppins", "Poppins-Regular", 400);
+@include fontFace("Poppins", "Poppins", "Poppins-Light", 300);

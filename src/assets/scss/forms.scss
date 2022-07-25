@@ -1,0 +1,96 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+input[type="number"],
+input[type="week"],
+input[type="url"],
+input[type="tel"],
+select,
+textarea {
+	width: 100%;
+	display: block;
+	outline: 0 none;
+	position: relative;
+	transition: all 0.3s;
+	color: $white;
+	text-align: left;
+	font-weight: 400;
+	font-family: $fontPoppins;
+	font-size: 20px;
+	background-color: transparent;
+	text-transform: none;
+	border: 1px $white solid;
+	line-height: 1.2;
+	padding: 16px 14px;
+	&::placeholder {
+		color: rgba(235, 235, 245, 0.6);
+	}
+
+	&[disabled],
+	&[disabled="disabled"] {
+		cursor: not-allowed;
+		background-color: #bdbdbd;
+	}
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+	white-space: normal;
+	min-height: 140px;
+	line-height: 1.2;
+}
+
+button,
+.btn {
+	outline: 0 none;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	transition: all 0.3s;
+	letter-spacing: 0;
+	text-decoration: none !important;
+	border: none;
+	line-height: 1.23;
+	padding: 14px 62px;
+	font-size: 28px;
+	min-width: 263px;
+	text-align: center;
+	background-color: $pink;
+	font-weight: 600;
+	font-family: $font;
+	border-radius: 4px;
+	text-transform: uppercase;
+	color: $white;
+	box-shadow: 7px 7px 0px $black;
+	&:hover {
+		background: $white;
+		color: $black;
+	}
+	&:active {
+		transform: translateY(2px);
+	}
+
+	&.btn-white {
+		font-size: 24px;
+		font-family: $fontPoppins;
+		font-weight: 500;
+		line-height: 1.2;
+		border-radius: 0;
+		padding: 14px 60px;
+		color: $black;
+		background-color: $white;
+		&:hover {
+			background: $pink;
+			color: $white;
+		}
+	}
+
+	&[disabled],
+	&[disabled="disabled"] {
+		cursor: not-allowed;
+	}
+}
