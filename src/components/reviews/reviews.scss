@@ -1,0 +1,57 @@
+@import "../../assets/scss/vars";
+
+.reviews{
+  padding: 10rem 0;
+
+  &-content {
+    position: relative;
+    border: 0.2rem $gray solid;
+    padding: 23rem 30rem 14rem 53rem;
+  }
+
+  &-img {
+    position: absolute;
+    top: 6rem;
+    left: 10rem;
+  }
+
+  &-message {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding-bottom: 3rem;
+  }
+
+  &-user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &-avatar {
+    border-radius: 100%;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &-info {
+    padding-left: 2rem;
+  }
+
+  &-name {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.3;
+    padding-bottom: 0.8rem;
+  }
+
+  &-company {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../assets/scss/vars";
+
+.specialize {
+  padding: 10rem 0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  &-block {
+    width: 33.33%;
+    border: 0.1rem $gray solid;
+  }
+
+  &-post {
+    padding: 6rem;
+  }
+
+  &-text {
+    padding-bottom: 6.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}

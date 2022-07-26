@@ -1,0 +1,22 @@
+@import "../../assets/scss/vars.scss";
+
+.partners {
+  padding: 10rem 0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 12.4rem;
+  }
+
+  &-block {
+    padding: 1rem;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

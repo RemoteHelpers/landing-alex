@@ -1,0 +1,42 @@
+@import "../../assets/scss/vars";
+
+.steps {
+  padding: 10rem 0;
+
+  &-content {
+    border: 0.2rem $gray solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5rem;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 2.4rem;
+  }
+
+  &-number {
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 1.2;
+    width: 8rem;
+    height: 8rem;
+    background: $gray;
+    border-radius: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  &-text {
+    padding-left: 4rem;
+    width: 70%;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}

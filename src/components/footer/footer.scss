@@ -1,0 +1,63 @@
+@import "../../assets/scss/vars";
+
+.footer {
+  padding: 5rem 9.6rem 9rem 0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+
+  &-breadcrumbs {
+    overflow: hidden;
+  }
+
+  &-list {
+    display: flex;
+    margin: 0 -1rem;
+
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $white;
+      position: relative;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0.9rem;
+        height: 1.8rem;
+        top: 0;
+        right: -1.6rem;
+        background: url("../../assets/img/footer/line.png");
+      }
+    }
+  }
+
+  &-chat {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: $fontPoppins;
+    &:after {
+      border: 1px $white solid;
+      position: absolute;
+      display: block;
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      background: $green;
+      border-radius: 100%;
+      top: 0.5rem;
+      right: 32rem;
+    }
+  }
+}

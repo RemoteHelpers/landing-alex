@@ -44,7 +44,7 @@ body {
 	height: 100%;
 	min-height: 100%;
 	font-size: 1.4rem;
-	min-width: 320px;
+	min-width: 32rem;
 }
 
 .main {
@@ -52,23 +52,32 @@ body {
 }
 
 .wr {
-	padding: 0 20px;
-	max-width: 1920px;
+	padding: 0 2rem;
+	max-width: 192rem;
 	margin: 0 auto;
 	width: 100%;
 }
 
 .wr-section {
-	max-width: 1920px;
+	max-width: 192rem;
 	margin: 0 auto;
 	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 
 	&-title {
-		width: 220px;
+		width: 22rem;
+		padding: 0 4rem;
+		h3 {
+			writing-mode: vertical-rl;
+			transform: scale(-1, -1);
+			margin: 0 0 0 auto;
+			text-transform: uppercase;
+		}
 	}
 
 	&-content {
-		width: calc(100% - 220px);
+		width: calc(100% - 22rem);
 	}
 }
 

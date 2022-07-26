@@ -1,0 +1,51 @@
+@import "../../assets/scss/vars";
+
+.header {
+  padding: 3rem;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    margin-right: 1rem;
+    width: 22rem;
+
+    img {
+      display: block;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-right: -4rem ;
+
+      li {
+        padding: 0 4rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 2rem;
+        font-weight: 400;
+        border-top: 0.2rem transparent solid;
+        border-bottom: 0.2rem transparent solid;
+        &:hover {
+          border-bottom-color: $white;
+        }
+      }
+    }
+  }
+}
