@@ -1,0 +1,131 @@
+@import "../../assets/scss/vars";
+
+.project {
+  padding: 10rem 0;
+
+  &-content {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &-user {
+    width: 34%;
+    border: 0.2rem $gray solid;
+    border-right: none;
+    padding: 8rem 6.6rem;
+  }
+
+  &-avatar {
+    padding-bottom: 6rem;
+    border-radius: 100%;
+    width: 18rem;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .h2 {
+    font-family: $fontPoppins;
+  }
+
+  &-description {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &-block {
+    width: 66%;
+    border: 0.2rem $gray solid;
+  }
+
+  &-title.h2 {
+    margin: 8rem 12rem 0;
+  }
+
+  &-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8rem 2rem;
+    border-bottom: 0.2rem $gray solid;
+    &-block {
+      width: 50%;
+      padding: 1.6rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+    }
+    .btn-white {
+      text-transform: none;
+      width: 20.6rem;
+    }
+  }
+
+  &-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7rem 5rem 7rem 18rem;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &-calendar {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      background: url("../../assets/img/project/cil_calendar.png") center center no-repeat;
+      background-size: contain;
+      top: -2rem;
+      left: -8.1rem;
+    }
+  }
+
+  .file {
+    display: block;
+    width: 100%;
+    position: relative;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 2.1rem;
+      height: 2rem;
+      background: url("../../assets/img/project/up.png") center center no-repeat;
+      background-size: contain;
+      right: 1.4rem;
+      top: 1.8rem;
+    }
+  }
+
+  &-fileInput {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    display: block;
+  }
+}

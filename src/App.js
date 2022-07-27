@@ -7,22 +7,24 @@ import Steps from "./components/steps/steps";
 import Advantages from "./components/advantages/advantages";
 import Reviews from "./components/reviews/reviews";
 import Footer from "./components/footer/footer";
+import Project from "./components/project/project"
 
 
 
 function App() {
   return (
     <div className="app">
-      <Header> </Header>
-        <Hero> </Hero>
-        <Partners> </Partners>
-        <Specialize> </Specialize>
-        <Price> </Price>
-        <Steps> </Steps>
-        <Advantages> </Advantages>
-        <Reviews> </Reviews>
-        <Partners> </Partners>
-      <Footer> </Footer>
+      <Header />
+        <Hero />
+        <Partners />
+        <Specialize />
+        <Price />
+        <Steps />
+        <Advantages />
+        <Reviews />
+        <Partners />
+        <Project />
+      <Footer />
     </div>
   );
 }

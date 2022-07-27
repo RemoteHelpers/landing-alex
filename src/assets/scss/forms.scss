@@ -27,6 +27,18 @@ textarea {
 	&::placeholder {
 		color: rgba(235, 235, 245, 0.6);
 	}
+	&:focus,
+	&.valid {
+		background: $white;
+		color: $black;
+		&::placeholder {
+			color: rgba($black, 0.6);
+		}
+	}
+
+	&.invalid {
+		border-color: red;
+	}
 
 	&[disabled],
 	&[disabled="disabled"] {
@@ -93,3 +105,100 @@ button,
 		cursor: not-allowed;
 	}
 }
+
+.default-select {
+	font-size: 2rem;
+	font-family: $fontPoppins;
+	font-weight: 400;
+	line-height: 1.2;
+	width: 100%;
+	display: block;
+	outline: 0 none;
+	position: relative;
+	transition: all 0.3s;
+	color: $black;
+	text-align: left;
+	background-color: transparent;
+	text-transform: none;
+	border: 1px $white solid;
+	&::placeholder {
+		color: rgba(235, 235, 245, 0.6);
+	}
+
+	&.valid {
+		.default-select__control {
+			background: $white;
+		}
+		.default-select__single-value {
+			color: $black;
+		}
+		.default-select__indicator {
+			svg {
+				fill: $gray;
+			}
+		}
+	}
+
+	.default-select__indicator {
+		svg {
+			fill: $white;
+		}
+	}
+
+	.default-select__indicator-separator {
+		display: none;
+	}
+
+	.default-select__value-container {
+		border: none;
+		border-radius: 0;
+	}
+
+	.default-select__menu {
+		border-radius: 0;
+	}
+
+	.default-select__control {
+		border-radius: 0;
+		border: none;
+		box-shadow: none;
+		padding: 1rem;
+		background: $black;
+		cursor: pointer;
+	}
+
+	.default-select__option {
+		transition: all .3s;
+		cursor: pointer;
+	}
+
+	.default-select__option--is-selected {
+		color: $white;
+		background: $black;
+	}
+
+	.default-select__option--is-focused {
+		background: rgba($black, .3);
+		color: $white;
+	}
+
+	.default-select__single-value {
+		color: $white;
+	}
+
+	.default-select__control--menu-is-open {
+		background: $white;
+
+		.default-select__single-value {
+			color: $black;
+		}
+		.default-select__indicator {
+			svg {
+				fill: $gray;
+			}
+		}
+	}
+}
+
+
+

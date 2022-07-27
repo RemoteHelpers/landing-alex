@@ -54,4 +54,22 @@
     line-height: 1.3;
     font-weight: 400;
   }
+
+
+  .slick-arrow {
+    top: -4.5rem;
+    min-width: 0.1rem;
+    border-bottom: 0.4rem $white solid;
+    border-right: 0.4rem $white solid;
+    &:before {
+      content: none;
+    }
+    &.slick-prev {
+      transform: rotate(135deg);
+    }
+    &.slick-next {
+      transform: rotate(-45deg);
+      left: 9rem;
+    }
+  }
 }
