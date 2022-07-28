@@ -3,17 +3,17 @@
 .price {
   padding: 18.6rem 0;
   font-family: $fontPoppins;
-  @media screen and (max-width: $tablet) {
-    padding: 9.6rem 0;
-  }
 
   &-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 1400px;
-    padding-left: 5%;
+    max-width: 140rem;
+    padding-left: 10rem;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
   }
 
   &-block {
@@ -22,10 +22,11 @@
     padding: 9.7rem 1.4rem 9.7rem 9rem;
     min-height: 62.2rem;
     position: relative;
-    @media screen and (max-width: $tablet) {
-      padding: 9.7rem 1.4rem 9.7rem 4rem;
-      min-height: 50rem;
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+      padding: 2rem 3.6rem;
     }
+
   }
 
   &-description {
@@ -52,27 +53,20 @@
     font-weight: 600;
     line-height: 1.5;
     padding-right: 1rem;
-    @media screen and (max-width: $tablet) {
-      font-size: 2rem;
-    }
+    width: 50%;
   }
 
   &-pay {
     font-size: 2.4rem;
     font-weight: 300;
     line-height: 1.5;
-    padding-right: 15rem;
-    @media screen and (max-width: $tablet) {
-      font-size: 2rem;
-    }
+    width: 50%;
   }
 
 
   .full-time {
     &:after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include content;
       width: 10.8rem;
       height: 10.8rem;
       top: 0;
@@ -84,6 +78,9 @@
 
   .part-time {
     margin-top: 22.5rem;
-    background: $pink url(../../assets/img/price/Rectangle.png) center center repeat;;
+    background: $pink url(../../assets/img/price/Rectangle.png) center center repeat;
+    @media only screen and (max-width: $mobile) {
+      margin-top: 6rem;
+    }
   }
 }

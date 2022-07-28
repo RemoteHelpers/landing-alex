@@ -26,7 +26,7 @@ const data = [
 function Specialize () {
 
     return (
-        <div className="specialize">
+        <div className="specialize" id="departments">
             <div className="wr-section">
                 <div className="wr-section-title">
                     <h3>We specialize in</h3>

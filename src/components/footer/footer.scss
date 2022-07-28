@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 5rem;
   }
 
   &-breadcrumbs {
@@ -26,10 +25,12 @@
       font-size: 2rem;
       margin-left: 1rem;
       margin-right: 1rem;
+      border-bottom: 0.2rem transparent solid;
+      &:hover {
+        border-bottom-color: $white;
+      }
       &:after {
-        display: block;
-        content: "";
-        position: absolute;
+        @include content;
         width: 0.9rem;
         height: 1.8rem;
         top: 0;
@@ -40,25 +41,24 @@
   }
 
   &-chat {
+    margin-top: 5rem;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 400;
     font-family: $fontPoppins;
+    padding-left: 3rem;
+    display: table;
+    margin-left: auto;
     &:after {
       border: 1px $white solid;
-      position: absolute;
-      display: block;
-      content: "";
+      @include content;
       width: 1.6rem;
       height: 1.6rem;
       background: $green;
       border-radius: 100%;
       top: 0.5rem;
-      right: 32rem;
+      left: 0;
     }
   }
 }

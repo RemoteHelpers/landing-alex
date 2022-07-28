@@ -13,19 +13,19 @@ function Header () {
                     <div className="header-nav">
                         <ul>
                             <li>
-                                <a href="#">Our departments</a>
+                                <a href="#departments">Our departments</a>
                             </li>
                             <li>
-                                <a href="#">Prise</a>
+                                <a href="#price">Price</a>
                             </li>
                             <li>
-                                <a href="#">Advantages</a>
+                                <a href="#advantages">Advantages</a>
                             </li>
                             <li>
-                                <a href="#">Reviews</a>
+                                <a href="#reviews">Reviews</a>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>

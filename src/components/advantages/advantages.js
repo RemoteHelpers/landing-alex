@@ -9,7 +9,7 @@ import ImgEllipse from "../../assets/img/advantages/Ellipse.png";
 function Advantages () {
 
     return (
-        <div className="advantages">
+        <div className="advantages" id="advantages">
             <div className="wr-section">
                 <div className="wr-section-title">
                     <h3>Advantages</h3>

@@ -33,7 +33,7 @@ function Project () {
     }
 
     return (
-        <div className="project">
+        <div className="project" id="contact">
             <div className="wr-section">
                 <div className="wr-section-title">
                     <h3>start a project</h3>
@@ -50,10 +50,10 @@ function Project () {
                             </div>
                         </div>
                         <div className="project-block">
-                            <div className="project-title h2">
-                                Get free consultation
-                            </div>
                             <form onSubmit={handleSubmit(onSubmit)} className="project-form">
+                                <div className="project-title h2">
+                                    Get free consultation
+                                </div>
                                 <div className="project-form-block">
                                     <input
                                         className={`${errors.name ? 'invalid' : ''} ${watch('name') && 'valid'}`}
@@ -66,7 +66,7 @@ function Project () {
                                     <input
                                         maxLength="12"
                                         className={`${errors.contactNumber ? 'invalid' : ''} ${watch('contactNumber') && 'valid'}`}
-                                        type="text"
+                                        type="tel"
                                         placeholder="Contact number"
                                         {...register("contactNumber", {
                                             valueAsNumber: true,

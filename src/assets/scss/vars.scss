@@ -9,7 +9,6 @@ $mobile-s: 480px;
 $white: #fff;
 $black: #000;
 
-
 $pink: #CB4293;
 $pinkTwo: #fa72fd;
 $gray: rgba(235, 235, 245, 0.6);
@@ -17,13 +16,16 @@ $orange: #F8B143;
 $gray:#343434;
 $green: #58CE66;
 
-
-
-
 $font: "SourceSerifPro", Arial, sans-serif;
 $fontPoppins: "Poppins", Arial, sans-serif;
 
 @function get-vw($target) {
   $vw-context: (1920 * 0.01) * 1px;
   @return ($target / $vw-context) * 1vw;
+}
+
+@mixin content {
+  content: '';
+  position: absolute;
+  display: block;
 }

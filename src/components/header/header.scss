@@ -1,7 +1,7 @@
 @import "../../assets/scss/vars";
 
 .header {
-  padding: 3rem;
+  padding: 3rem 0;
 
   .wr {
     max-width: 178rem;
@@ -33,7 +33,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
-      margin-right: -4rem ;
+      margin: 0 -4rem ;
 
       li {
         padding: 0 4rem;

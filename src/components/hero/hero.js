@@ -11,9 +11,7 @@ function Hero () {
                     <div className="hero-text">
                         Our team of virtual assistants will help to manage your operations remotely
                     </div>
-                    <div className="hero-btn">
-                        <button>Get started </button>
-                    </div>
+                    <a className="btn" href="#contact">Get started</a>
                 </div>
                 <div className="hero-img">
                     <img src={Images} alt="#"/>

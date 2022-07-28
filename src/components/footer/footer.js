@@ -15,11 +15,11 @@ function Footer () {
                     <div className="footer-content">
                         <div className="footer-breadcrumbs">
                             <div className="footer-list">
-                                <a href="#">Our departments</a>
-                                <a href="#">Prise</a>
-                                <a href="#">Advantages</a>
-                                <a href="#">reviews</a>
-                                <a href="#">Contact</a>
+                                <a href="#departments">Our departments</a>
+                                <a href="#price">Price</a>
+                                <a href="#advantages">Advantages</a>
+                                <a href="#reviews">reviews</a>
+                                <a href="#contact">Contact</a>
                             </div>
                         </div>
                         <div className="footer-img">

@@ -43,7 +43,7 @@ const contentsSlider = [
 function Reviews () {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -51,7 +51,7 @@ function Reviews () {
     };
 
     return (
-        <div className="reviews">
+        <div className="reviews" id="reviews">
             <div className="wr-section">
                 <div className="wr-section-title">
                     <h3>reviews</h3>

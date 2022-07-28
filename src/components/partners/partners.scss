@@ -2,9 +2,6 @@
 
 .partners {
   padding: 8rem 0;
-  @media screen and (max-width: $tablet) {
-    padding: 5rem 0;
-  }
 
   &-content {
     display: flex;
@@ -15,10 +12,8 @@
 
   &-block {
     padding: 1rem;
-
     img {
       display: block;
-      width: 100%;
     }
   }
 }

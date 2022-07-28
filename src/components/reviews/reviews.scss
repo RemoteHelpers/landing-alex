@@ -2,19 +2,13 @@
 
 .reviews{
   padding: 9.7rem 0;
-  @media screen and (max-width: $tablet) {
-    padding: 6rem 0;
-  }
 
   &-content {
     position: relative;
     border: 0.2rem $gray solid;
     padding: 23rem 30rem 13.3rem 53rem;
-    @media screen and (max-width: $desktop-xl) {
-      padding: 23rem 15rem 13.3rem 26rem;
-    }
-    @media screen and (max-width: $tablet) {
-      padding: 30rem 9rem 9.3rem 10rem;
+    @media only screen and (max-width: $mobile) {
+      padding: 25rem 1.8rem 5.4rem 6rem;
     }
   }
 
@@ -22,6 +16,11 @@
     position: absolute;
     top: 6rem;
     left: 10rem;
+    @media only screen and (max-width: $mobile) {
+      width: 8rem;
+      height: 7rem;
+      left: 2rem;
+    }
   }
 
   &-message {
@@ -39,6 +38,8 @@
 
   &-avatar {
     border-radius: 100%;
+    width: 11rem;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -48,6 +49,7 @@
 
   &-info {
     padding-left: 2rem;
+    width: calc(100% - 11rem);
   }
 
   &-name {
