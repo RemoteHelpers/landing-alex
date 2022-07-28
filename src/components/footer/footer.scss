@@ -1,7 +1,7 @@
 @import "../../assets/scss/vars";
 
 .footer {
-  padding: 5rem 9.6rem 9rem 0;
+  padding: 3rem 8rem 9rem 0;
 
   &-content {
     display: flex;
@@ -23,6 +23,7 @@
       text-decoration: none;
       color: $white;
       position: relative;
+      font-size: 2rem;
       margin-left: 1rem;
       margin-right: 1rem;
       &:after {

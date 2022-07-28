@@ -3,6 +3,10 @@
 .header {
   padding: 3rem;
 
+  .wr {
+    max-width: 178rem;
+  }
+
   &-content {
     display: flex;
     justify-content: space-between;
@@ -10,7 +14,7 @@
   }
 
   &-logo {
-    margin-right: 1rem;
+    margin: 0 1.5rem;
     width: 22rem;
 
     img {
@@ -40,7 +44,6 @@
         color: $white;
         font-size: 2rem;
         font-weight: 400;
-        border-top: 0.2rem transparent solid;
         border-bottom: 0.2rem transparent solid;
         &:hover {
           border-bottom-color: $white;

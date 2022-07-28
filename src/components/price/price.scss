@@ -1,20 +1,31 @@
 @import "../../assets/scss/vars";
 
 .price {
-  padding: 10rem 0;
+  padding: 18.6rem 0;
   font-family: $fontPoppins;
+  @media screen and (max-width: $tablet) {
+    padding: 9.6rem 0;
+  }
 
   &-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    padding-left: 5%;
   }
 
   &-block {
     border: 0.2rem $gray solid;
-    width: 33.3%;
-    padding: 10rem 10rem 8.4rem 8rem;
+    width: 42.3%;
+    padding: 9.7rem 1.4rem 9.7rem 9rem;
+    min-height: 62.2rem;
     position: relative;
+    @media screen and (max-width: $tablet) {
+      padding: 9.7rem 1.4rem 9.7rem 4rem;
+      min-height: 50rem;
+    }
   }
 
   &-description {
@@ -25,7 +36,6 @@
 
   &-text {
     font-size: 2rem;
-    font-weight: 400;
     line-height: 1.5;
     padding-bottom: 4rem;
   }
@@ -41,13 +51,22 @@
     font-size: 2.4rem;
     font-weight: 600;
     line-height: 1.5;
+    padding-right: 1rem;
+    @media screen and (max-width: $tablet) {
+      font-size: 2rem;
+    }
   }
 
   &-pay {
     font-size: 2.4rem;
     font-weight: 300;
     line-height: 1.5;
+    padding-right: 15rem;
+    @media screen and (max-width: $tablet) {
+      font-size: 2rem;
+    }
   }
+
 
   .full-time {
     &:after {
@@ -64,7 +83,7 @@
   }
 
   .part-time {
-    margin-top: 20.6rem;
+    margin-top: 22.5rem;
     background: $pink url(../../assets/img/price/Rectangle.png) center center repeat;;
   }
 }

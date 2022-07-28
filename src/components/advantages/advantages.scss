@@ -2,8 +2,11 @@
 
 
 .advantages {
-  padding: 20rem 0;
+  padding: 28rem 0;
   position: relative;
+  @media screen and (max-width: $tablet) {
+    padding: 10rem 0;
+  }
   &:after {
     position: absolute;
     display: block;
@@ -13,6 +16,14 @@
     height: 9rem;
     top: 0;
     left: 47%;
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .wr-section-content {
+    display: flex;
+    justify-content: flex-start;
   }
 
   &-content {
@@ -25,6 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 8rem;
   }
 
   &-steps {
@@ -32,7 +44,7 @@
     font-size: 2.8rem;
     line-height: 1.2;
     div {
-      padding: 2rem 0;
+      padding-bottom: 4rem;
     }
   }
 

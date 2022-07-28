@@ -105,7 +105,7 @@ function Project () {
                             </form>
                             <div className="project-link">
                                 <div className="project-calendar">Schedule a call</div>
-                                <a href="#">sales@rh-s.com</a>
+                                <a href="mailto:sales@rh-s.com">sales@rh-s.com</a>
                             </div>
                         </div>
                     </div>

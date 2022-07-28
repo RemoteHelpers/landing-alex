@@ -1,7 +1,8 @@
 @import "../../assets/scss/vars";
 
 .project {
-  padding: 10rem 0;
+  padding: 12.3rem 0;
+
 
   &-content {
     display: flex;
@@ -9,7 +10,7 @@
   }
 
   &-user {
-    width: 34%;
+    width: 34.5%;
     border: 0.2rem $gray solid;
     border-right: none;
     padding: 8rem 6.6rem;
@@ -48,11 +49,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 8rem 2rem;
+    padding: 6.4rem 5rem;
     border-bottom: 0.2rem $gray solid;
     &-block {
       width: 50%;
-      padding: 1.6rem 3rem;
+      padding: 1.5rem 1rem 1.5rem 5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -67,6 +68,7 @@
     .btn-white {
       text-transform: none;
       width: 20.6rem;
+      min-width: 1rem;
     }
   }
 
@@ -74,7 +76,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7rem 5rem 7rem 18rem;
+    padding: 7.8rem 9.6rem 6.4rem 20.1rem;
     font-size: 2.8rem;
     line-height: 1.2;
     font-weight: 400;

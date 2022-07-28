@@ -1,14 +1,16 @@
 @import "../../assets/scss/vars.scss";
 
 .partners {
-  padding: 10rem 0;
+  padding: 8rem 0;
+  @media screen and (max-width: $tablet) {
+    padding: 5rem 0;
+  }
 
   &-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
-    padding-right: 12.4rem;
   }
 
   &-block {

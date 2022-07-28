@@ -1,12 +1,16 @@
 @import "../../assets/scss/vars";
 
 .hero {
-  padding: 10rem 0 ;
+  padding: 8rem 0 ;
 
   &-content {
     margin: 0 auto;
     width: 100%;
-    max-width: 1300px;
+    max-width: 135.8rem;
+
+    span {
+      color: $pink;
+    }
   }
 
   &-text {
@@ -18,7 +22,7 @@
   }
 
   &-btn {
-    padding-bottom: 8.4rem;
+    padding-bottom: 11.2rem;
   }
 
   &-img {
