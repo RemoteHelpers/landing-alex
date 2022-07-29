@@ -4,6 +4,9 @@
 .advantages {
   padding: 28rem 0;
   position: relative;
+  @media only screen and (max-width: $mobile) {
+    padding: 11rem 0;
+  }
 
   .wr-section-content {
     display: flex;
@@ -37,10 +40,14 @@
     font-size: 2.8rem;
     line-height: 1.2;
     @media only screen and (max-width: $mobile) {
-      padding-top: 15rem;
+      padding: 9rem 1rem 0 0;
+      font-size: 2rem;
     }
     div {
       padding-bottom: 4rem;
+      @media only screen and (max-width: $mobile) {
+        padding-bottom: 1.5rem;
+      }
     }
   }
 
@@ -49,7 +56,6 @@
     position: relative;
     @media only screen and (max-width: $mobile) {
       width: 100%;
-      padding-bottom: 7rem;
     }
     &:before {
       @include content;
@@ -85,6 +91,9 @@
     @media only screen and (max-width: $mobile) {
       transform: rotate(-90deg);
       background: none;
+      padding: 8rem 0;
+      width: 26.5rem;
+      margin-left: auto;
     }
       &:after {
         @include content;
@@ -96,10 +105,10 @@
         margin-bottom: -4.5rem;
         z-index: -1;
         @media only screen and (max-width: $mobile) {
-          width: 4rem;
-          height: 4rem;
-          left: -49px;
-          bottom: 150px;
+          width: 6rem;
+          height: 6rem;
+          top: 69px;
+          left: -70px;
         }
       }
   }

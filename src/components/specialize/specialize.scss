@@ -2,6 +2,9 @@
 
 .specialize {
   padding: 11rem 0;
+  @media only screen and (max-width: $mobile) {
+    padding: 4.3rem 0;
+  }
 
   &-content {
     display: flex;
@@ -23,6 +26,16 @@
 
   &-post {
     padding: 6rem;
+    @media only screen and (max-width: $mobile) {
+      padding: 1rem 2rem 2.3rem;
+    }
+  }
+
+  &-img {
+    max-width: 10rem;
+    @media only screen and (max-width: $mobile) {
+      width: 4rem;
+    }
   }
 
   &-text {
@@ -32,6 +45,8 @@
     max-width: 31.4rem;
     @media only screen and (max-width: $mobile) {
       max-width: none;
+      font-size: 1.7rem;
+      padding-bottom: 2.2rem;
     }
   }
 }

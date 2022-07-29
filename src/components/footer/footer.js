@@ -26,7 +26,10 @@ function Footer () {
                             <img src={ImgIn} alt="#"/>
                         </div>
                     </div>
-                    <div className="footer-chat">We’re online! Let’s talk a project</div>
+                    <div className="footer-chat">
+                        <div className="footer-chat-text">We’re online! Let’s talk a project</div>
+                        <div className="footer-chat-mobile">Chat</div>
+                    </div>
                 </div>
             </div>
         </div>

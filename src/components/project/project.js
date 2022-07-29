@@ -10,6 +10,7 @@ import ImgAvatar from "../../assets/img/project/Avatar.png"
 
 
 function Project () {
+    const [isOpenPopup, setIsOpenPopup] = useState(false);
     const countriesOptions = useMemo(() => countryList().getData(), []);
     const { register, handleSubmit, watch, formState: { errors }, setValue, reset } = useForm();
     const [country, setCountry] = useState('');
@@ -99,7 +100,15 @@ function Project () {
                                     </label>
                                 </div>
                                 <div className="project-form-block">
-                                    <a href="#">What is an RFP?</a>
+                                    <a
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            setIsOpenPopup(true);
+                                        }}
+                                    >
+                                        What is an RFP?
+                                    </a>
                                     <button className="btn-white">Submit</button>
                                 </div>
                             </form>
@@ -108,6 +117,18 @@ function Project () {
                                 <a href="mailto:sales@rh-s.com">sales@rh-s.com</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className={`project-popUp ${isOpenPopup ? 'openPopUp' : '' }`}>
+                <div className="project-popUp-wr">
+                    <button className="project-popUp-btn" onClick={() => setIsOpenPopup(false)}> </button>
+                    <div className="project-popUp-title">What is an RFP?</div>
+                    <div className="project-popUp-text">
+                        A request for proposal (RFP) is a great way for you to quickly get us up to speed on your project. It should include an introduction to your company and the reason for submitting your RFP. Tell us what it is you hope to accomplish with us and lay out any problems you or your users face with your current site. Lastly, please provide an overview of your project scope, timeline, and budget. We're happy to guide you through this on a call.
+                    </div>
+                    <div className="project-popUp-fishnet">
+                        <a href="#" download>Download our template :)</a>
                     </div>
                 </div>
             </div>

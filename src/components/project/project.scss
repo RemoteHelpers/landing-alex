@@ -2,12 +2,16 @@
 
 .project {
   padding: 12.3rem 0;
+  position: relative;
+  @media only screen and (max-width: $mobile) {
+    padding: 8rem 0 3rem;
+  }
 
 
   &-content {
     display: flex;
     justify-content: flex-start;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       flex-direction: column;
     }
   }
@@ -17,8 +21,12 @@
     border: 0.2rem $gray solid;
     border-right: none;
     padding: 8rem 6.6rem;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       width: 100%;
+      border: 0.2rem $gray solid;
+    }
+    @media only screen and (max-width: $mobile) {
+      padding: 3rem 1.6rem;
     }
   }
 
@@ -27,6 +35,10 @@
     border-radius: 100%;
     width: 18rem;
     overflow: hidden;
+    @media only screen and (max-width: $mobile) {
+      width: 10rem;
+      margin-bottom: 1rem;
+    }
     img {
       width: 100%;
       display: block;
@@ -35,19 +47,27 @@
 
   .h2 {
     font-family: $fontPoppins;
+    @media only screen and (max-width: $mobile) {
+      font-size: 2rem;
+      margin: 0 0 0.7rem;
+    }
   }
 
   &-description {
     font-size: 2.4rem;
     font-weight: 400;
     line-height: 1.2;
+    @media only screen and (max-width: $mobile) {
+      font-size: 1.7rem;
+    }
   }
 
   &-block {
     width: 66%;
     border: 0.2rem $gray solid;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       width: 100%;
+      border-top: none;
     }
   }
 
@@ -55,6 +75,10 @@
     width: 100%;
     &.h2 {
       margin-bottom: 6.3rem;
+      @media only screen and (max-width: $mobile) {
+        margin-bottom: 0.7rem;
+        font-size: 2rem;
+      }
     }
   }
 
@@ -66,9 +90,13 @@
     padding: 8rem 7.6rem 6.5rem;
     max-width: 105.5rem;
     margin-left: auto;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       flex-direction: column;
     }
+    @media only screen and (max-width: $mobile) {
+      padding: 1rem 1.4rem 2.5rem;
+    }
+
     &-block {
       width: 48%;
       max-width: 420px;
@@ -76,9 +104,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @media only screen and (max-width: $mobile) {
+      @media only screen and (max-width: $tablet) {
         width: 100%;
         flex-direction: column;
+      }
+      @media only screen and (max-width: $mobile) {
+        padding-bottom: 0;
+        align-items: flex-start;
       }
 
       a {
@@ -86,12 +118,25 @@
         color: $white;
         font-size: 2rem;
         line-height: 1.2;
+        border-bottom: 0.2rem transparent solid;
+        @media only screen and (max-width: $tablet) {
+          padding-bottom: 2rem;
+        }
+        @media only screen and (max-width: $mobile) {
+          padding: 2rem 0;
+        }
+        &:hover {
+          border-bottom-color: $white;
+        }
       }
     }
     .btn-white {
       text-transform: none;
       width: 20.6rem;
       min-width: 1rem;
+      @media only screen and (max-width: $mobile) {
+        width: 9.6rem;
+      }
     }
   }
 
@@ -105,16 +150,20 @@
     line-height: 1.2;
     font-weight: 400;
     @media only screen and (max-width: $mobile) {
-      text-align: center;
       flex-direction: column;
-      padding: 3rem 2rem;
+      align-items: flex-start;
+      padding: 4rem 2rem;
     }
 
     a {
       color: $white;
       text-decoration: none;
+      border-bottom: 0.2rem $black solid;
+      @media only screen and (max-width: $tablet) {
+        border-bottom: 0.2rem $white solid;
+      }
       @media only screen and (max-width: $mobile) {
-        width: 100%;
+        font-size: 1.7rem;
       }
     }
   }
@@ -123,7 +172,9 @@
     position: relative;
     @media only screen and (max-width: $mobile) {
       width: 100%;
-      padding-left: 2rem;
+      padding-left: 4rem;
+      font-size: 2rem;
+      padding-bottom: 2rem;
     }
     &:after {
       @include content;
@@ -136,8 +187,8 @@
       @media only screen and (max-width: $mobile) {
         width: 3rem;
         height: 3rem;
-        left: 17.5rem;
-        top: 0;
+        left: 0;
+        top: -0.6rem;
       }
     }
   }
@@ -167,5 +218,86 @@
     left: 0;
     height: 100%;
     display: block;
+  }
+
+  &-popUp {
+    width: 100%;
+    justify-content: center;
+    background: $black;
+    z-index: 1000;
+    position: fixed;
+    display: none;
+    padding: 5rem;
+    align-items: center;
+    align-content: center;
+    top: 0;
+    overflow: auto;
+    height: 100vh;
+
+    &.openPopUp {
+      display: flex;
+    }
+
+    &-wr {
+      padding-top: 16rem;
+      width: 93rem;
+    }
+
+
+
+    &-btn {
+      position: absolute;
+      background: url("../../assets/img/project/close.png") center center no-repeat;
+      background-size: contain;
+      width: 5rem;
+      height: 5rem;
+      padding: 0;
+      min-width: 0.1rem;
+      right: 8.5rem;
+      top: 8.5rem;
+      &:hover {
+        background: url("../../assets/img/project/close.svg") center center no-repeat;
+      }
+    }
+
+    &-title {
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      font-family: $fontPoppins;
+      padding-bottom: 6rem;
+    }
+
+    &-text {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      padding-bottom: 4rem;
+    }
+
+    &-fishnet {
+      padding-left: 4rem;
+      position: relative;
+      &:after {
+        @include content;
+        border-bottom: 0.3rem #fff solid;
+        border-right: 0.3rem #fff solid;
+        width: 1rem;
+        height: 1rem;
+        left: 8px;
+        transform: rotate(45deg);
+        top: 5px;
+      }
+      a {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        text-decoration: none;
+        border-bottom: 0.2rem transparent solid;
+        color: $white;
+        &:hover {
+          border-bottom-color: $white;
+        }
+      }
+    }
+
   }
 }

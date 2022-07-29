@@ -1,7 +1,13 @@
+import { useState, useMemo } from "react";
+
 import "./header.scss";
 import logo from "../../assets/img/logo.png";
 
 function Header () {
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const classOpenMenu = useMemo(() => isOpenMenu ? 'open' : '', [isOpenMenu]);
+
+    const onCloseMenu = () => setIsOpenMenu(false);
 
     return (
         <header className="header">
@@ -10,22 +16,25 @@ function Header () {
                     <div className="header-logo">
                         <a href="#"><img src={logo} alt="#"/></a>
                     </div>
-                    <div className="header-nav">
+                    <button type="button" className={`header-btn ${classOpenMenu}`} onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                        {[1, 2, 3, 4, 5, 6].map((item) => <span key={item} />)}
+                    </button>
+                    <div className={`header-nav ${classOpenMenu}`}>
                         <ul>
                             <li>
-                                <a href="#departments">Our departments</a>
+                                <a href="#departments" onClick={onCloseMenu}>Our departments</a>
                             </li>
                             <li>
-                                <a href="#price">Price</a>
+                                <a href="#price" onClick={onCloseMenu}>Price</a>
                             </li>
                             <li>
-                                <a href="#advantages">Advantages</a>
+                                <a href="#advantages" onClick={onCloseMenu}>Advantages</a>
                             </li>
                             <li>
-                                <a href="#reviews">Reviews</a>
+                                <a href="#reviews" onClick={onCloseMenu}>Reviews</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="#contact" onClick={onCloseMenu}>Contact</a>
                             </li>
                         </ul>
                     </div>

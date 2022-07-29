@@ -68,14 +68,21 @@ body {
 	max-width: 192rem;
 	margin: 0 auto;
 	width: 100%;
+	@media only screen and (max-width: $mobile) {
+		padding: 0 1rem;
+	}
 }
 
 .wr-section {
+	padding: 0 2rem;
 	max-width: 192rem;
 	margin: 0 auto;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
+	@media only screen and (max-width: $mobile) {
+		padding: 0;
+	}
 
 	&-title {
 		width: 22rem;
@@ -83,6 +90,10 @@ body {
 		@media screen and (max-width: $tablet) {
 			width: 12rem;
 			padding: 0 2rem;
+		}
+		@media only screen and (max-width: $mobile) {
+			width: 7rem;
+			padding: 0 1rem;
 		}
 		h3 {
 			writing-mode: vertical-rl;
@@ -96,6 +107,9 @@ body {
 		width: calc(100% - 22rem);
 		@media screen and (max-width: $tablet) {
 			width: calc(100% - 12rem);
+		}
+		@media only screen and (max-width: $mobile) {
+			width: calc(100% - 7rem);
 		}
 	}
 }

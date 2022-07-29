@@ -2,20 +2,39 @@
 
 .footer {
   padding: 3rem 8rem 9rem 0;
+  @media only screen and (max-width: $mobile) {
+    padding: 1rem 2rem;
+  }
 
   &-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: $mobile) {
+      align-items: flex-end;
+      flex-direction: column;
+    }
   }
 
   &-breadcrumbs {
     overflow: hidden;
+    @media only screen and (max-width: $mobile) {
+      padding-bottom: 4.4rem;
+    }
+  }
+
+  &-img {
+    width: 4.4rem;
+    @media only screen and (max-width: $mobile) {
+      width: 2rem;
+    }
   }
 
   &-list {
     display: flex;
     margin: 0 -1rem;
+    flex-wrap: wrap;
+
 
     a {
       text-transform: uppercase;
@@ -26,6 +45,9 @@
       margin-left: 1rem;
       margin-right: 1rem;
       border-bottom: 0.2rem transparent solid;
+      @media only screen and (max-width: $mobile) {
+        font-size: 1.4rem;
+      }
       &:hover {
         border-bottom-color: $white;
       }
@@ -34,7 +56,7 @@
         width: 0.9rem;
         height: 1.8rem;
         top: 0;
-        right: -1.6rem;
+        left: -1.6rem;
         background: url("../../assets/img/footer/line.png");
       }
     }
@@ -50,6 +72,10 @@
     padding-left: 3rem;
     display: table;
     margin-left: auto;
+    @media only screen and (max-width: $mobile) {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+    }
     &:after {
       border: 1px $white solid;
       @include content;
@@ -59,6 +85,25 @@
       border-radius: 100%;
       top: 0.5rem;
       left: 0;
+      @media only screen and (max-width: $mobile) {
+        width: 1rem;
+        height: 1rem;
+        left: 16px;
+        bottom: 5px;
+      }
+    }
+
+    &-text {
+      @media only screen and (max-width: $mobile) {
+        display: none;
+      }
+    }
+    
+    &-mobile {
+      display: none;
+      @media only screen and (max-width: $mobile) {
+        display: block;
+      }
     }
   }
 }

@@ -24,6 +24,10 @@ textarea {
 	border: 1px $white solid;
 	line-height: 1.2;
 	padding: 1.6rem 1.4rem;
+	@media only screen and (max-width: $mobile) {
+		font-size: 1.7rem;
+		padding: 1.2rem 1.4rem;
+	}
 	&::placeholder {
 		color: rgba(235, 235, 245, 0.6);
 	}
@@ -38,6 +42,13 @@ textarea {
 
 	&.invalid {
 		border-color: red;
+	}
+
+	&.popUpWhite {
+		border-bottom-color: $black;
+		&::placeholder {
+			color: rgba($black, 0.6);
+		}
 	}
 
 	&[disabled],
@@ -76,6 +87,11 @@ button,
 	font-family: $font;
 	border-radius: 0.4rem;
 	color: $white;
+	@media only screen and (max-width: $mobile) {
+		font-size: 1.8rem;
+		padding: 1rem 3rem;
+		min-width: 1rem;
+	}
 	&:hover {
 		background: $white;
 		color: $black;
@@ -93,6 +109,10 @@ button,
 		padding: 1.4rem 6rem;
 		color: $black;
 		background-color: $white;
+		@media only screen and (max-width: $mobile) {
+			font-size: 1.7rem;
+			padding: 1rem 1.6rem;
+		}
 		&:hover {
 			background: $pink;
 			color: $white;
@@ -164,6 +184,9 @@ button,
 		padding: 1rem;
 		background: $black;
 		cursor: pointer;
+		@media only screen and (max-width: $mobile) {
+			padding: 0.4rem;
+		}
 	}
 
 	.default-select__option {

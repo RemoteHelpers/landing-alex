@@ -15,15 +15,15 @@ function App() {
   return (
     <div className="app">
       <Header />
-        <Hero />
-        <Partners />
-        <Specialize />
-        <Price />
-        <Steps />
-        <Advantages />
-        <Reviews />
-        <Partners />
-        <Project />
+      <Hero />
+      <Partners />
+      <Specialize />
+      <Price />
+      <Steps />
+      <Advantages />
+      <Reviews />
+      <Partners />
+      <Project />
       <Footer />
     </div>
   );

@@ -2,6 +2,9 @@
 
 .hero {
   padding: 8rem 0;
+  @media only screen and (max-width: $mobile) {
+    padding: 4rem 0;
+  }
 
   &-content {
     margin: 0 auto;
@@ -10,6 +13,9 @@
 
     span {
       color: $pink;
+      @media only screen and (max-width: $mobile) {
+        font-size: 3.2rem;
+      }
     }
   }
 
@@ -21,16 +27,112 @@
     line-height: 1.2;
     @media only screen and (max-width: $mobile) {
       width: 100%;
+      font-size: 2rem;
+      padding-bottom: 4rem;
     }
   }
 
   &-img {
     padding-top: 11.2rem;
     width: 100%;
+    @media only screen and (max-width: $mobile) {
+      padding-top: 7.2rem;
+    }
 
     img {
       display: block;
       margin: 0 auto;
+    }
+  }
+
+  &-popUp {
+    display: none;
+    max-width: 77rem;
+    background: $white;
+    position: relative;
+    z-index: 1000;
+
+    &.popUp-open {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 9.6rem;
+    }
+
+    &-wr {
+      padding: 0 3rem;
+    }
+
+    &-close {
+      button {
+        @include content;
+        width: 2.5rem;
+        height: 2.5rem;
+        min-width: 0.1rem;
+        background: url("../../assets/img/hero/open.svg") center center no-repeat;
+        background-size: contain;
+        padding: 0;
+        top: 4.3rem;
+        right: 4.3rem;
+        &:hover {
+          background: url("../../assets/img/hero/close.svg") center center no-repeat;
+        }
+      }
+    }
+
+    &-content {
+      padding: 11.7rem 0;
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 4rem;
+      line-height: 1.2;
+      font-weight: 500;
+      font-family: $fontPoppins;
+      color: $pink;
+      padding-bottom: 6rem;
+    }
+
+    &-text, &-item {
+      color: $black;
+      font-size: 2.8rem;
+      line-height: 1.2;
+    }
+
+    &-item {
+      padding-bottom: 2.4rem;
+    }
+
+    &-text {
+      padding-bottom: 4rem;
+      max-width: 56.2rem;
+      margin: 0 auto;
+    }
+
+    &-block {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-img {
+      width: 29%;
+    }
+
+    &-form {
+      width: 70%;
+
+      &-input {
+        padding: 1rem 0;
+      }
+    }
+
+    &-btn {
+      padding-top: 5.3rem;
+      text-align: left;
+      button {
+        padding: 1.4rem 1.6rem;
+      }
     }
   }
 }

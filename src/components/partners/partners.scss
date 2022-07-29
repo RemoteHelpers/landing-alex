@@ -2,6 +2,9 @@
 
 .partners {
   padding: 8rem 0;
+  @media only screen and (max-width: $mobile) {
+    padding: 1rem 0;
+  }
 
   &-content {
     display: flex;
@@ -12,6 +15,10 @@
 
   &-block {
     padding: 1rem;
+    @media only screen and (max-width: $mobile) {
+      width: 50%;
+      max-width: 14rem;
+    }
     img {
       display: block;
     }
