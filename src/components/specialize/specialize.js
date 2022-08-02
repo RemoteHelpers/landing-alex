@@ -1,4 +1,5 @@
 import "./specialize.scss";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 /*img*/
 import ImgBall from "../../assets/img/specialize/ball.png";
@@ -29,22 +30,26 @@ function Specialize () {
         <div className="specialize" id="departments">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <h3>We specialize in</h3>
+                    <AnimationOnScroll animateIn="animate__backInDown">
+                        <h3>We specialize in</h3>
+                    </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <div className="specialize-content">
+                    <AnimationOnScroll animateIn="animate__backInRight">
+                        <div className="specialize-content">
                         {data.map(({ title, text, icon }, index) => (
-                            <div className="specialize-block" key={`specialize-block_${index}`}>
-                                <div className="specialize-post">
-                                    <h4>{title}</h4>
-                                    <div className="specialize-text" dangerouslySetInnerHTML={{ __html: text }} />
-                                    <div className="specialize-img">
-                                        <img src={icon} alt="#"/>
+                                <div className="specialize-block" key={`specialize-block_${index}`}>
+                                    <div className="specialize-post">
+                                        <h4>{title}</h4>
+                                        <div className="specialize-text" dangerouslySetInnerHTML={{ __html: text }} />
+                                        <div className="specialize-img">
+                                            <img src={icon} alt="#"/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         ))}
-                    </div>
+                        </div>
+                    </AnimationOnScroll>
                 </div>
             </div>
         </div>

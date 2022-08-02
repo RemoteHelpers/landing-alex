@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 /*style*/
 import "slick-carousel/slick/slick.css";
@@ -54,32 +55,36 @@ function Reviews () {
         <div className="reviews" id="reviews">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <h3>reviews</h3>
+                    <AnimationOnScroll animateIn="animate__backInDown">
+                        <h3>reviews</h3>
+                    </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <div className="reviews-content">
-                        <div className="reviews-img">
-                            <img src={ImgFrame} alt="$"/>
+                    <AnimationOnScroll animateIn="animate__slideInUp">
+                        <div className="reviews-content">
+                            <div className="reviews-img">
+                                <img src={ImgFrame} alt="$"/>
+                            </div>
+                            <Slider {...settings}>
+                                {contentsSlider.map(({ message, user }, index) => (
+                                    <div className="reviews-block" key={`reviews-block_${index}`}>
+                                        <div className="reviews-message">
+                                            {message}
+                                        </div>
+                                        <div className="reviews-user">
+                                            <div className="reviews-avatar">
+                                                <img src={user.avatar} alt="#"/>
+                                            </div>
+                                            <div className="reviews-info">
+                                                <div className="reviews-name">{user.name}</div>
+                                                <div className="reviews-company">{user.company}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </Slider>
                         </div>
-                        <Slider {...settings}>
-                            {contentsSlider.map(({ message, user }, index) => (
-                                <div className="reviews-block" key={`reviews-block_${index}`}>
-                                    <div className="reviews-message">
-                                        {message}
-                                    </div>
-                                    <div className="reviews-user">
-                                        <div className="reviews-avatar">
-                                            <img src={user.avatar} alt="#"/>
-                                        </div>
-                                        <div className="reviews-info">
-                                            <div className="reviews-name">{user.name}</div>
-                                            <div className="reviews-company">{user.company}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </Slider>
-                    </div>
+                    </AnimationOnScroll>
                 </div>
             </div>
         </div>

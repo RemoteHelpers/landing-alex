@@ -3,6 +3,7 @@
 @import "fonts";
 @import "typography";
 @import "forms";
+@import "animate.css/animate.min.css";
 
 * {
 	box-sizing: border-box;
@@ -25,6 +26,14 @@
 	&::-webkit-media-controls-start-playback-button {
 		display: none !important;
 		-webkit-appearance: none;
+	}
+	&::-webkit-scrollbar {
+		width: 4px;
+		transition: opacity 0.3s ease;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $pink;
+		outline: 1px solid $pink;
 	}
 }
 
@@ -112,6 +121,10 @@ body {
 			width: calc(100% - 7rem);
 		}
 	}
+}
+
+.app {
+	overflow: hidden;
 }
 
 

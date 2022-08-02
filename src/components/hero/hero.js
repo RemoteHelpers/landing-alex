@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import {useForm} from "react-hook-form";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Images from "../../assets/img/hero/geometric_figure.jpg";
+import ImgCat from "../../assets/img/hero/cat.png";
 
 
 import "./hero.scss";
-import Images from "../../assets/img/hero/geometric_figure.jpg";
-import ImgCat from "../../assets/img/hero/cat.png"
-import {useForm} from "react-hook-form";
 
 function Hero () {
     const [isOpenPopup, setIsOpenPopup] = useState(false);
@@ -15,10 +16,12 @@ function Hero () {
     };
 
     return (
-        <div className="hero">
+        <div className="hero" id="hero">
             <div className="wr">
                 <div className="hero-content">
-                    <h1>Start your project with <span>Remote Helpers</span></h1>
+                    <AnimationOnScroll initiallyVisible={true} animateOnce={true} animateIn="animate__tada">
+                        <h1>Start your project with <span>Remote Helpers</span></h1>
+                    </AnimationOnScroll>
                     <div className="hero-text">
                         Our team of virtual assistants will help to manage your operations remotely
                     </div>

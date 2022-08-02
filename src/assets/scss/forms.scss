@@ -40,16 +40,20 @@ textarea {
 		}
 	}
 
-	&.invalid {
-		border-color: red;
-	}
-
 	&.popUpWhite {
+		border-top-width: 0;
+		border-left-width: 0;
+		border-right-width: 0;
 		border-bottom-color: $black;
 		&::placeholder {
 			color: rgba($black, 0.6);
 		}
 	}
+
+	&.invalid {
+		border-color: red;
+	}
+
 
 	&[disabled],
 	&[disabled="disabled"] {
@@ -222,5 +226,24 @@ button,
 	}
 }
 
+.checkbox {
+	display: inline-block;
+	cursor: pointer;
+	input {
+		display: none;
+		&:checked + .checkbox-text:before {
 
+		}
+	}
+	&-text {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		&:after {
 
+		}
+		&:before {
+
+		}
+	}
+}

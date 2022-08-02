@@ -1,4 +1,5 @@
 import "./steps.scss";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 /*img*/
 import ImgTriangle from "../../assets/img/steps/triangle.png";
@@ -30,26 +31,30 @@ function Steps () {
         <div className="steps">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <h3>Justified prices</h3>
+                    <AnimationOnScroll animateIn="animate__backInDown">
+                        <h3>Justified prices</h3>
+                    </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <div className="steps-content">
-                        <div className="steps-list">
-                            {steps.map(({ number, text }, index) => (
-                                <div className="steps-item" key={`steps-item_${index}`}>
-                                    <div className="steps-number">
-                                        { number }
+                    <AnimationOnScroll animateIn="animate__fadeInTopRight">
+                        <div className="steps-content">
+                            <div className="steps-list">
+                                {steps.map(({ number, text }, index) => (
+                                    <div className="steps-item" key={`steps-item_${index}`}>
+                                        <div className="steps-number">
+                                            { number }
+                                        </div>
+                                        <div className="steps-text">
+                                            { text }
+                                        </div>
                                     </div>
-                                    <div className="steps-text">
-                                        { text }
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+                            <div className="steps-img">
+                                <img src={ImgTriangle} alt="#"/>
+                            </div>
                         </div>
-                        <div className="steps-img">
-                            <img src={ImgTriangle} alt="#"/>
-                        </div>
-                    </div>
+                    </AnimationOnScroll>
                 </div>
             </div>
         </div>
