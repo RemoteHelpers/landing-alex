@@ -1,0 +1,85 @@
+@import "../../assets/scss/vars";
+
+.rainbow {
+  padding: 27rem 0 9rem;
+  @media only screen and (max-width: $tablet) {
+    padding: 12rem;
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 3rem 0;
+  }
+
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: -4rem;
+    @media only screen and (max-width: $tablet) {
+      justify-content: center;
+    }
+    @media only screen and (max-width: $mobile) {
+      margin: 2rem;
+    }
+  }
+
+  &-block {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 3rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+    margin: 2rem;
+    @media only screen and (max-width: $tablet) {
+      width: 42%;
+      &:nth-child(2n):after {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: $mobile-s) {
+      width: 100%;
+    }
+    &:after {
+      @include content;
+      width: 12rem;
+      border: 0.2rem #343434 solid;
+      right: -71%;
+      top: 50%;
+      margin-top: -0.1rem;
+      @media only screen and (max-width: $desktop-l) {
+        display: none;
+      }
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3rem;
+    padding: 3.6rem 2rem;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @media only screen and (max-width: $tablet) {
+      font-size: 2.4rem;
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 2rem;
+      padding: 2rem;
+    }
+  }
+}

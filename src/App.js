@@ -9,23 +9,24 @@ import Reviews from "./components/reviews/reviews";
 import Footer from "./components/footer/footer";
 import Project from "./components/project/project";
 import Fortune from "./components/fortune/fortune";
+import Rainbow from "./components/rainbow/rainbow";
 
 function App() {
 
     return (
         <div className="app">
-            <Header />
+            <Header/>
             <Hero/>
-            <Partners/>
+            <Rainbow/>
             <Specialize/>
             <Price/>
             <Steps/>
             <Advantages/>
+            <Fortune/>
             <Reviews/>
             <Partners/>
             <Project/>
             <Footer/>
-            <Fortune/>
         </div>
     );
 }
