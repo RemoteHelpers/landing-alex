@@ -55,12 +55,12 @@ function Reviews () {
         <div className="reviews" id="reviews">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <AnimationOnScroll animateIn="animate__backInDown">
+                    <AnimationOnScroll animateIn="animate__backInDown" animateOnce={true}>
                         <h3>reviews</h3>
                     </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <AnimationOnScroll animateIn="animate__slideInUp">
+                    <AnimationOnScroll animateIn="animate__slideInUp" animateOnce={true}>
                         <div className="reviews-content">
                             <div className="reviews-img">
                                 <img src={ImgFrame} alt="$"/>

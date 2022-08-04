@@ -7,12 +7,12 @@ function Price () {
         <div className="price" id="price">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <AnimationOnScroll animateIn="animate__backInDown">
+                    <AnimationOnScroll animateIn="animate__backInDown" animateOnce={true}>
                         <h3>PriСe</h3>
                     </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <AnimationOnScroll animateIn="animate__flipInY">
+                    <AnimationOnScroll animateIn="animate__flipInY" animateOnce={true}>
                         <div className="price-content">
                             <div className="price-block full-time">
                                 <h4>Full-time</h4>

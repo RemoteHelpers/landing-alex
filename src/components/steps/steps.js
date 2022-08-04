@@ -31,12 +31,12 @@ function Steps () {
         <div className="steps">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <AnimationOnScroll animateIn="animate__backInDown">
+                    <AnimationOnScroll animateIn="animate__backInDown" animateOnce={true}>
                         <h3>Justified prices</h3>
                     </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <AnimationOnScroll animateIn="animate__fadeInTopRight">
+                    <AnimationOnScroll animateIn="animate__fadeInTopRight" animateOnce={true}>
                         <div className="steps-content">
                             <div className="steps-list">
                                 {steps.map(({ number, text }, index) => (

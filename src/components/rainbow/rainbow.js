@@ -1,4 +1,5 @@
-import "./rainbow.scss"
+import "./rainbow.scss";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 
@@ -31,17 +32,19 @@ function Rainbow () {
             <div className="wr-section">
                 <div className="wr-section-title"> </div>
                 <div className="wr-section-content">
-                    <div className="rainbow-content">
-                        {box.map(({text, color}, index) => {
-                            return (
-                                <div key={index} className="rainbow-block" style={{ borderColor: color}}>
-                                    <div className="rainbow-item" style={{ backgroundColor: color}}>
-                                        {text}
+                    <AnimationOnScroll animateIn="animate__backInLeft" animateOnce={true}>
+                        <div className="rainbow-content">
+                            {box.map(({text, color}, index) => {
+                                return (
+                                    <div key={index} className="rainbow-block" style={{ borderColor: color}}>
+                                        <div className="rainbow-item" style={{ backgroundColor: color}}>
+                                            {text}
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        })}
-                    </div>
+                                )
+                            })}
+                        </div>
+                    </AnimationOnScroll>
                 </div>
             </div>
         </div>

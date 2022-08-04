@@ -14,22 +14,22 @@ function Partners () {
             <div className="wr-section">
                 <div className="wr-section-content">
                     <div className="partners-content">
-                        <AnimationOnScroll animateIn="animate__bounceIn">
+                        <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
                             <div className="partners-block">
                                 <img src={ImgOne} alt="#"/>
                             </div>
                         </AnimationOnScroll>
-                        <AnimationOnScroll animateIn="animate__bounceIn">
+                        <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
                             <div className="partners-block">
                                 <img src={ImgTwo} alt="#"/>
                             </div>
                         </AnimationOnScroll>
-                        <AnimationOnScroll animateIn="animate__bounceIn">
+                        <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
                             <div className="partners-block">
                                 <img src={ImgThree} alt="#"/>
                             </div>
                         </AnimationOnScroll>
-                        <AnimationOnScroll animateIn="animate__bounceIn">
+                        <AnimationOnScroll animateIn="animate__bounceIn" animateOnce={true}>
                             <div className="partners-block">
                                 <img src={ImgFour} alt="#"/>
                             </div>

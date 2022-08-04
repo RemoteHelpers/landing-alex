@@ -30,12 +30,12 @@ function Specialize () {
         <div className="specialize" id="departments">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <AnimationOnScroll animateIn="animate__backInDown">
+                    <AnimationOnScroll animateIn="animate__backInDown" animateOnce={true}>
                         <h3>We specialize in</h3>
                     </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <AnimationOnScroll animateIn="animate__backInRight">
+                    <AnimationOnScroll animateIn="animate__backInRight" animateOnce={true}>
                         <div className="specialize-content">
                         {data.map(({ title, text, icon }, index) => (
                                 <div className="specialize-block" key={`specialize-block_${index}`}>

@@ -40,12 +40,12 @@ function Project () {
         <div className="project" id="contact">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <AnimationOnScroll animateIn="animate__backInDown">
+                    <AnimationOnScroll animateIn="animate__backInDown" animateOnce={true}>
                         <h3>start a project</h3>
                     </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <AnimationOnScroll animateIn="animate__rotateInUpRight">
+                    <AnimationOnScroll animateIn="animate__rotateInUpRight" animateOnce={true}>
                         <div className="project-content">
                             <div className="project-user">
                                 <div className="project-avatar">

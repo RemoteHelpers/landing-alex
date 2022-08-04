@@ -13,12 +13,12 @@ function Advantages () {
         <div className="advantages" id="advantages">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <AnimationOnScroll animateIn="animate__backInDown">
+                    <AnimationOnScroll animateOnce={true} animateIn="animate__backInDown">
                         <h3>Advantages</h3>
                     </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <AnimationOnScroll animateIn="animate__fadeInBottomRight">
+                    <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInBottomRight">
                         <div className="advantages-content">
                             <div className="advantages-left">
                                 <img src={ImgPeople} alt="#"/>

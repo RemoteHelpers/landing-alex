@@ -2,6 +2,7 @@ import {useRef, useState, useEffect} from 'react';
 import "./fortune.scss";
 import {useForm} from "react-hook-form";
 import ImgEllipse from "../../assets/img/advantages/Ellipse.png";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 const prizes = [
@@ -141,43 +142,47 @@ function Fortune() {
         <div className="fortune">
             <div className="wr-section">
                 <div className="wr-section-title">
-                    <h3>Wheel of fortune</h3>
+                    <AnimationOnScroll animateIn="animate__backInDown" animateOnce={true}>
+                        <h3>Wheel of fortune</h3>
+                    </AnimationOnScroll>
                 </div>
                 <div className="wr-section-content">
-                    <div className="fortune-content">
-                        <div className="fortune-wheel">
-                            <div className="deal-wheel" ref={wheelRef}>
-                                <ul className="spinner" ref={spinnerRef}> </ul>
-                                <div className="ticker" ref={tickerRef}> </div>
-                            </div>
-                        </div>
-                        <div className="fortune-block">
-                            <form onSubmit={handleSubmit(onSubmit)} className="fortune-form">
-                                <h4>Spin and win discounts!</h4>
-                                <div className="fortune-text">
-                                    Enter your email and press the button
+                    <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true}>
+                        <div className="fortune-content">
+                            <div className="fortune-wheel">
+                                <div className="deal-wheel" ref={wheelRef}>
+                                    <ul className="spinner" ref={spinnerRef}> </ul>
+                                    <div className="ticker" ref={tickerRef}> </div>
                                 </div>
-                                <input
-                                    type="email"
-                                    className={`${errors.email ? 'invalid' : ''} ${watch('email') && 'valid'}`}
-                                    placeholder="Email"
-                                    {...register("email", {required: true})}
-                                />
-                                <label htmlFor="agree" className={`${errors.agree ? 'invalid' : ''} checkbox`}>
+                            </div>
+                            <div className="fortune-block">
+                                <form onSubmit={handleSubmit(onSubmit)} className="fortune-form">
+                                    <h4>Spin and win discounts!</h4>
+                                    <div className="fortune-text">
+                                        Enter your email and press the button
+                                    </div>
                                     <input
-                                        type="checkbox"
-                                        id="agree"
-                                        {...register("agree", {required: true})}
+                                        type="email"
+                                        className={`${errors.email ? 'invalid' : ''} ${watch('email') && 'valid'}`}
+                                        placeholder="Email"
+                                        {...register("email", {required: true})}
                                     />
-                                    <span className="checkbox-text">I allow the processing of personal data</span>
-                                </label>
-                                <button disabled={isSubmit} type="submit">Spin the wheel!</button>
-                            </form>
-                            <div className="fortune-img">
-                                <img src={ImgEllipse} alt="#"/>
+                                    <label htmlFor="agree" className={`${errors.agree ? 'invalid' : ''} checkbox`}>
+                                        <input
+                                            type="checkbox"
+                                            id="agree"
+                                            {...register("agree", {required: true})}
+                                        />
+                                        <span className="checkbox-text">I allow the processing of personal data</span>
+                                    </label>
+                                    <button disabled={isSubmit} type="submit">Spin the wheel!</button>
+                                </form>
+                                <div className="fortune-img">
+                                    <img src={ImgEllipse} alt="#"/>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </AnimationOnScroll>
                 </div>
             </div>
         </div>
