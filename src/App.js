@@ -12,7 +12,6 @@ import Fortune from "./components/fortune/fortune";
 import Rainbow from "./components/rainbow/rainbow";
 
 function App() {
-
     return (
         <div className="app">
             <Header/>

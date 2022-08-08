@@ -14,6 +14,9 @@
     width: 100%;
     max-width: 140rem;
     padding-left: 10rem;
+    @media only screen and (max-width: $tablet) {
+      padding-left: 0;
+    }
     @media only screen and (max-width: $mobile) {
       flex-direction: column;
       padding-left: 0;
@@ -29,6 +32,8 @@
     position: relative;
     @media only screen and (max-width: $tablet) {
       padding: 4rem 3.6rem;
+      width: 48%;
+      min-height: 1px;
     }
     @media only screen and (max-width: $mobile) {
       width: 100%;
@@ -36,6 +41,29 @@
       min-height: 29rem;
     }
 
+    &.full-time {
+      &:after {
+        @include content;
+        width: 10.8rem;
+        height: 10.8rem;
+        top: 0;
+        right: 0;
+        border-radius: 0 0 0 100%;
+        background: $orange url(../../assets/img/price/Rectangle.png) center center repeat;
+        @media only screen and (max-width: $mobile) {
+          width: 5.8rem;
+          height: 4.8rem;
+        }
+      }
+    }
+
+    &.part-time {
+      margin-top: 22.5rem;
+      background: $pink url(../../assets/img/price/Rectangle.png) center center repeat;
+      @media only screen and (max-width: $mobile) {
+        margin-top: 6rem;
+      }
+    }
   }
 
   &-description {
@@ -48,7 +76,7 @@
     font-size: 2rem;
     line-height: 1.5;
     padding-bottom: 4rem;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       font-size: 1.8rem;
       padding: 0;
     }
@@ -72,8 +100,6 @@
     width: 50%;
     @media only screen and (max-width: $tablet) {
       width: 65%;
-    }
-    @media only screen and (max-width: $mobile) {
       font-size: 2rem;
     }
   }
@@ -88,31 +114,6 @@
     }
     @media only screen and (max-width: $mobile) {
       font-size: 1.8rem;
-    }
-  }
-
-
-  .full-time {
-    &:after {
-      @include content;
-      width: 10.8rem;
-      height: 10.8rem;
-      top: 0;
-      right: 0;
-      border-radius: 0 0 0 100%;
-      background: $orange url(../../assets/img/price/Rectangle.png) center center repeat;
-      @media only screen and (max-width: $mobile) {
-        width: 5.8rem;
-        height: 4.8rem;
-      }
-    }
-  }
-
-  .part-time {
-    margin-top: 22.5rem;
-    background: $pink url(../../assets/img/price/Rectangle.png) center center repeat;
-    @media only screen and (max-width: $mobile) {
-      margin-top: 6rem;
     }
   }
 }

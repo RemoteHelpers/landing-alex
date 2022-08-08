@@ -4,6 +4,7 @@ import Select from 'react-select';
 import countryList from 'react-select-country-list';
 import { PopupModal } from "react-calendly";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Popup from "../popup/popup";
 
 import "./project.scss";
 
@@ -133,18 +134,16 @@ function Project () {
                     </AnimationOnScroll>
                 </div>
             </div>
-            <div className={`project-popUp ${isOpenPopup ? 'openPopUp' : '' }`}>
-                <div className="project-popUp-wr">
-                    <button className="project-popUp-btn" onClick={() => setIsOpenPopup(false)}> </button>
-                    <div className="project-popUp-title">What is an RFP?</div>
-                    <div className="project-popUp-text">
-                        A request for proposal (RFP) is a great way for you to quickly get us up to speed on your project. It should include an introduction to your company and the reason for submitting your RFP. Tell us what it is you hope to accomplish with us and lay out any problems you or your users face with your current site. Lastly, please provide an overview of your project scope, timeline, and budget. We're happy to guide you through this on a call.
-                    </div>
-                    <div className="project-popUp-fishnet">
-                        <a href="#" download>Download our template :)</a>
-                    </div>
+            <Popup
+                title="What is an RFP?"
+                isOpen={isOpenPopup}
+                onClose={() => setIsOpenPopup(false)}
+            >
+                A request for proposal (RFP) is a great way for you to quickly get us up to speed on your project. It should include an introduction to your company and the reason for submitting your RFP. Tell us what it is you hope to accomplish with us and lay out any problems you or your users face with your current site. Lastly, please provide an overview of your project scope, timeline, and budget. We're happy to guide you through this on a call.
+                <div className="project-fishnet">
+                    <a href="#" download>Download our template :)</a>
                 </div>
-            </div>
+            </Popup>
         </div>
     )
 }

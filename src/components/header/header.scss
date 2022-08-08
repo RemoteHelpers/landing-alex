@@ -5,6 +5,9 @@
   @media only screen and (max-width: $desktop-l) {
     padding: 4.2rem 0;
   }
+  @media only screen and (max-width: $mobile) {
+    padding: 2rem 0;
+  }
 
   .wr {
     max-width: 178rem;

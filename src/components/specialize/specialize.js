@@ -38,15 +38,15 @@ function Specialize () {
                     <AnimationOnScroll animateIn="animate__backInRight" animateOnce={true}>
                         <div className="specialize-content">
                         {data.map(({ title, text, icon }, index) => (
-                                <div className="specialize-block" key={`specialize-block_${index}`}>
-                                    <div className="specialize-post">
-                                        <h4>{title}</h4>
-                                        <div className="specialize-text" dangerouslySetInnerHTML={{ __html: text }} />
-                                        <div className="specialize-img">
-                                            <img src={icon} alt="#"/>
-                                        </div>
+                            <div className="specialize-block" key={`specialize-block_${index}`}>
+                                <div className="specialize-post">
+                                    <h4>{title}</h4>
+                                    <div className="specialize-text" dangerouslySetInnerHTML={{ __html: text }} />
+                                    <div className="specialize-img">
+                                        <img src={icon} alt="#"/>
                                     </div>
                                 </div>
+                            </div>
                         ))}
                         </div>
                     </AnimationOnScroll>

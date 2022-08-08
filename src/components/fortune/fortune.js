@@ -167,14 +167,16 @@ function Fortune() {
                                         placeholder="Email"
                                         {...register("email", {required: true})}
                                     />
-                                    <label htmlFor="agree" className={`${errors.agree ? 'invalid' : ''} checkbox`}>
-                                        <input
-                                            type="checkbox"
-                                            id="agree"
-                                            {...register("agree", {required: true})}
-                                        />
-                                        <span className="checkbox-text">I allow the processing of personal data</span>
-                                    </label>
+                                    <div className="fortune-checkbox">
+                                        <label htmlFor="agree" className={`${errors.agree ? 'invalid' : ''} checkbox`}>
+                                            <input
+                                                type="checkbox"
+                                                id="agree"
+                                                {...register("agree", {required: true})}
+                                            />
+                                            <span className="checkbox-text">I allow the processing of personal data</span>
+                                        </label>
+                                    </div>
                                     <button disabled={isSubmit} type="submit">Spin the wheel!</button>
                                 </form>
                                 <div className="fortune-img">

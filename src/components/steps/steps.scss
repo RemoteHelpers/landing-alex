@@ -2,7 +2,7 @@
 
 .steps {
   padding: 14rem 0;
-  @media only screen and (max-width: $mobile) {
+  @media only screen and (max-width: $tablet) {
     padding: 5rem 0;
   }
 
@@ -27,7 +27,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding-bottom: 2.4rem;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       padding-bottom: 3.2rem;
     }
   }
@@ -44,7 +44,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       width: 5rem;
       height: 5rem;
     }
@@ -56,7 +56,7 @@
     font-size: 2.8rem;
     font-weight: 400;
     line-height: 1.2;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       font-size: 2rem;
       width: calc(100% - 5rem);
       padding-left: 1rem;
@@ -65,7 +65,7 @@
 
   &-list {
     padding-top: 3rem;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet) {
       width: 100%;
       padding: 0;
     }
@@ -76,6 +76,9 @@
     img {
       width: 100%;
       display: block;
+    }
+    @media only screen and (max-width: $tablet) {
+      max-width: 350px;
     }
     @media only screen and (max-width: $mobile) {
       width: 100%;

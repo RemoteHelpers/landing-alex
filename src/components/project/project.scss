@@ -3,8 +3,11 @@
 .project {
   padding: 12.3rem 0;
   position: relative;
+  @media only screen and (max-width: $tablet) {
+    padding: 8rem 0;
+  }
   @media only screen and (max-width: $mobile) {
-    padding: 8rem 0 3rem;
+    padding: 6rem 0 3rem;
   }
 
 
@@ -24,6 +27,7 @@
     @media only screen and (max-width: $tablet) {
       width: 100%;
       border: 0.2rem $gray solid;
+      padding: 4rem;
     }
     @media only screen and (max-width: $mobile) {
       padding: 3rem 1.6rem;
@@ -35,10 +39,15 @@
     border-radius: 100%;
     width: 18rem;
     overflow: hidden;
+    @media only screen and (max-width: $tablet) {
+      width: 14rem;
+      margin-bottom: 3rem;
+    }
     @media only screen and (max-width: $mobile) {
       width: 10rem;
       margin-bottom: 1rem;
     }
+
     img {
       width: 100%;
       display: block;
@@ -47,9 +56,13 @@
 
   .h2 {
     font-family: $fontPoppins;
+    @media only screen and (max-width: $tablet) {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
     @media only screen and (max-width: $mobile) {
       font-size: 2rem;
-      margin: 0 0 0.7rem;
+      margin-bottom: 0.7rem;
     }
   }
 
@@ -75,6 +88,10 @@
     width: 100%;
     &.h2 {
       margin-bottom: 6.3rem;
+      @media only screen and (max-width: $tablet) {
+        margin-bottom: 4rem;
+        font-size: 3rem;
+      }
       @media only screen and (max-width: $mobile) {
         margin-bottom: 0.7rem;
         font-size: 2rem;
@@ -92,6 +109,7 @@
     margin-left: auto;
     @media only screen and (max-width: $tablet) {
       flex-direction: column;
+      padding: 4rem;
     }
     @media only screen and (max-width: $mobile) {
       padding: 1rem 1.4rem 2.5rem;
@@ -125,11 +143,13 @@
         @media only screen and (max-width: $mobile) {
           padding: 2rem 0;
         }
+
         &:hover {
           border-bottom-color: $white;
         }
       }
     }
+
     .btn-white {
       text-transform: none;
       width: 20.6rem;
@@ -145,14 +165,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7.8rem 9.6rem 6.4rem 20.1rem;
+    padding: 5.8rem 9.6rem 4.4rem;
     font-size: 2.8rem;
     line-height: 1.2;
     font-weight: 400;
+    @media only screen and (max-width: $tablet) {
+      font-size: 2.2rem;
+    }
     @media only screen and (max-width: $mobile) {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       padding: 4rem 2rem;
+      font-size: 1.7rem;
     }
 
     a {
@@ -162,20 +186,17 @@
       @media only screen and (max-width: $tablet) {
         border-bottom: 0.2rem $white solid;
       }
-      @media only screen and (max-width: $mobile) {
-        font-size: 1.7rem;
-      }
     }
   }
 
   &-calendar {
     position: relative;
     cursor: pointer;
+    padding: 2rem 0 2rem 8rem;
     @media only screen and (max-width: $mobile) {
-      width: 100%;
-      padding-left: 4rem;
       font-size: 2rem;
-      padding-bottom: 2rem;
+      padding: 0 0 0 4rem;
+      margin-bottom: 2rem;
     }
     &:after {
       @include content;
@@ -183,8 +204,8 @@
       height: 6rem;
       background: url("../../assets/img/project/cil_calendar.png") center center no-repeat;
       background-size: contain;
-      top: -2rem;
-      left: -8.1rem;
+      top: 0;
+      left: 0;
       @media only screen and (max-width: $mobile) {
         width: 3rem;
         height: 3rem;
@@ -198,6 +219,7 @@
     display: block;
     width: 100%;
     position: relative;
+
     &:after {
       @include content;
       width: 2.1rem;
@@ -221,110 +243,43 @@
     display: block;
   }
 
-  &-popUp {
-    width: 100%;
-    justify-content: center;
-    background: $black;
-    z-index: 1000;
-    position: fixed;
-    display: none;
-    padding: 5rem;
-    align-items: center;
-    align-content: center;
-    top: 0;
-    overflow: auto;
-    height: 100vh;
+
+  &-fishnet {
+    padding-left: 4rem;
+    position: relative;
+    margin-top: 4rem;
     @media only screen and (max-width: $mobile) {
-      padding: 2.5rem;
+      padding-left: 3rem;
     }
 
-    &.openPopUp {
-      display: flex;
+    &:after {
+      @include content;
+      border-bottom: 0.3rem #fff solid;
+      border-right: 0.3rem #fff solid;
+      width: 1rem;
+      height: 1rem;
+      left: 8px;
+      transform: rotate(45deg);
+      top: 5px;
     }
 
-    &-wr {
-      padding-top: 16rem;
-      width: 93rem;
-      @media only screen and (max-width: $mobile) {
-        padding-top: 3rem;
-      }
-    }
-
-
-
-    &-btn {
-      position: absolute;
-      background: url("../../assets/img/project/close.png") center center no-repeat;
-      background-size: contain;
-      width: 5rem;
-      height: 5rem;
-      padding: 0;
-      min-width: 0.1rem;
-      right: 8.5rem;
-      top: 8.5rem;
-      @media only screen and (max-width: $mobile) {
-        width: 2rem;
-        height: 2rem;
-        right: 4rem;
-        top: 4rem;
-      }
-      &:hover {
-        background: url("../../assets/img/project/close.svg") center center no-repeat;
-      }
-    }
-
-    &-title {
-      font-size: 4rem;
+    a {
+      font-size: 2.8rem;
       font-weight: 600;
       line-height: 1.2;
-      font-family: $fontPoppins;
-      padding-bottom: 6rem;
-      @media only screen and (max-width: $mobile) {
+      text-decoration: none;
+      border-bottom: 0.2rem transparent solid;
+      color: $white;
+      @media only screen and (max-width: $tablet) {
         font-size: 2rem;
-        padding-bottom: 2.6rem;
       }
-    }
-
-    &-text {
-      font-size: 2.8rem;
-      line-height: 1.2;
-      padding-bottom: 4rem;
       @media only screen and (max-width: $mobile) {
         font-size: 1.7rem;
       }
-    }
 
-    &-fishnet {
-      padding-left: 4rem;
-      position: relative;
-      @media only screen and (max-width: $mobile) {
-        padding-left: 3rem;
-      }
-      &:after {
-        @include content;
-        border-bottom: 0.3rem #fff solid;
-        border-right: 0.3rem #fff solid;
-        width: 1rem;
-        height: 1rem;
-        left: 8px;
-        transform: rotate(45deg);
-        top: 5px;
-      }
-      a {
-        font-size: 2.8rem;
-        font-weight: 600;
-        line-height: 1.2;
-        text-decoration: none;
-        border-bottom: 0.2rem transparent solid;
-        color: $white;
-        @media only screen and (max-width: $mobile) {
-          font-size: 1.7rem;
-        }
-        &:hover {
-          border-bottom-color: $white;
-        }
+      &:hover {
+        border-bottom-color: $white;
       }
     }
-
   }
 }

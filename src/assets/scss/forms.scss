@@ -163,6 +163,8 @@ button,
 	}
 
 	.default-select__indicator {
+		padding-top: 0;
+		padding-bottom: 0;
 		svg {
 			fill: $white;
 		}
@@ -175,6 +177,11 @@ button,
 	.default-select__value-container {
 		border: none;
 		border-radius: 0;
+		padding: 0.2rem 0.8rem;
+	}
+
+	.default-select__input-container {
+		margin: 0.2rem;
 	}
 
 	.default-select__menu {
