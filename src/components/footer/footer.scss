@@ -81,7 +81,7 @@
       margin-top: 2rem;
     }
     &:after {
-      border: 1px $white solid;
+      border: 0.1rem $white solid;
       @include content;
       width: 1.6rem;
       height: 1.6rem;
@@ -92,8 +92,8 @@
       @media only screen and (max-width: $mobile) {
         width: 1rem;
         height: 1rem;
-        left: 16px;
-        bottom: 5px;
+        left: 1.6rem;
+        bottom: 0.5rem;
       }
     }
 
@@ -131,8 +131,8 @@
         width: 1.6rem;
         height: 1.6rem;
         padding: 0;
-        right: 32px;
-        bottom: 32px;
+        right: 3.2rem;
+        bottom: 3.2rem;
       }
     }
     &:before {
