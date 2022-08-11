@@ -90,7 +90,7 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	@media only screen and (max-width: $mobile) {
-		padding: 0;
+		flex-direction: column;
 	}
 
 	&-title {
@@ -101,14 +101,18 @@ body {
 			padding: 0 2rem;
 		}
 		@media only screen and (max-width: $mobile) {
-			width: 7rem;
-			padding: 0 1rem;
+			width: 100%;
+			padding: 0;
 		}
 		h3 {
 			writing-mode: vertical-rl;
 			transform: scale(-1, -1);
 			margin: 0 0 0 auto;
 			text-transform: uppercase;
+			@media only screen and (max-width: $mobile) {
+				transform: none;
+				writing-mode: horizontal-tb;
+			}
 		}
 	}
 
@@ -118,7 +122,7 @@ body {
 			width: calc(100% - 12rem);
 		}
 		@media only screen and (max-width: $mobile) {
-			width: calc(100% - 7rem);
+			width: 100%;
 		}
 	}
 }
