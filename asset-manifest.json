@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/landing-alex/static/css/main.237cecfd.css",
+    "main.css": "/landing-alex/static/css/main.a544232b.css",
     "main.js": "/landing-alex/static/js/main.09cb3dd9.js",
     "static/media/people.png": "/landing-alex/static/media/people.4b499ef4d0712791ecfa.png",
     "static/media/SourceSerifPro-Bold.eot": "/landing-alex/static/media/SourceSerifPro-Bold.39f54b027666ed98d50f.eot",
@@ -47,11 +47,11 @@
     "static/media/logo-no-bg.svg": "/landing-alex/static/media/logo-no-bg.4d881dc9874adc7364eb819a01793fa1.svg",
     "index.html": "/landing-alex/index.html",
     "static/media/icon.svg": "/landing-alex/static/media/icon.58c67e41323fe21037a5.svg",
-    "main.237cecfd.css.map": "/landing-alex/static/css/main.237cecfd.css.map",
+    "main.a544232b.css.map": "/landing-alex/static/css/main.a544232b.css.map",
     "main.09cb3dd9.js.map": "/landing-alex/static/js/main.09cb3dd9.js.map"
   },
   "entrypoints": [
-    "static/css/main.237cecfd.css",
+    "static/css/main.a544232b.css",
     "static/js/main.09cb3dd9.js"
   ]
 }
